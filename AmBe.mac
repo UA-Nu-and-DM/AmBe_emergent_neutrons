@@ -1,7 +1,7 @@
 /tracking/verbose 1
 
 
-
+#uncomment the following 4 lines to get visualization files (.wrl); comment if you need to simulate a large amount of particles, e.g. > 1000
 /vis/open VRML2FILE
 /vis/drawVolume
 /vis/scene/add/trajectories
