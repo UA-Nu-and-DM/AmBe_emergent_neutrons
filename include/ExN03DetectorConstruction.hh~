@@ -1,0 +1,53 @@
+
+#ifndef ExN03DetectorConstruction_h
+#define ExN03DetectorConstruction_h 1
+
+#include "G4VUserDetectorConstruction.hh"
+#include "globals.hh"
+
+class G4Tubs;
+class G4LogicalVolume;
+class G4VPhysicalVolume;
+
+//keele
+class G4Box;
+
+class ExN03DetectorConstruction : public G4VUserDetectorConstruction
+{
+  public:
+  
+    ExN03DetectorConstruction();
+   ~ExN03DetectorConstruction();
+
+  public:
+     
+  
+     
+     G4VPhysicalVolume* Construct();
+     
+    //keele
+     const G4VPhysicalVolume* GetBox() {return box_phys;};
+     const G4VPhysicalVolume* GetWall1a() {return crete_phys1a;};    
+     const G4VPhysicalVolume* GetWall1b() {return crete_phys1b;};    
+     const G4VPhysicalVolume* GetWall2a() {return crete_phys2a;};    
+     const G4VPhysicalVolume* GetWall2b() {return crete_phys2b;};    
+     const G4VPhysicalVolume* GetWall3() {return crete_phys3;};    
+     const G4VPhysicalVolume* GetphysiWorld() {return world_phys;};           
+     const G4VPhysicalVolume* GetCylinder()   {return cylinder_phys;};
+     const G4VPhysicalVolume* GetHole(int n)           {return holes_phys[n];};
+     const G4VPhysicalVolume* GetTube(int n)           {return tubes_phys[n];};
+     const G4VPhysicalVolume* GetCounter(int n)        {return counters_phys[n];};
+     
+     G4double GetWorldSize() {return worldsize;};
+    
+      
+  private:
+          G4VPhysicalVolume *holes_phys[4], *tubes_phys[4], *counters_phys[4], *world_phys, *cylinder_phys, *box_phys, *crete_phys1a, *crete_phys1b, *crete_phys2a, *crete_phys2b, *crete_phys3;
+          G4double worldsize;
+
+          G4VPhysicalVolume* ConstructCounter();     
+};
+
+
+#endif
+
