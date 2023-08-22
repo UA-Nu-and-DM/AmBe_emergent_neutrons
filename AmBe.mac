@@ -1,0 +1,22 @@
+/tracking/verbose 1
+
+
+
+/vis/open VRML2FILE
+/vis/drawVolume
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate
+
+/run/initialize
+
+/process/em/fluo true
+/process/em/auger true
+
+
+
+#BEGIN seed
+/random/setSeeds 9089
+#END seed
+
+
+/run/beamOn 100
