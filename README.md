@@ -1,6 +1,6 @@
 # AmBe_emergent_neutrons
 
-Simulation of AmBe emergent neutrons (based on emergent neutrons simulation code for AmLi). 
+Simulation of AmBe emergent neutrons (based on emergent neutrons simulation code for AmLi by J. Busenitz and R. Sazzad). 
 
 Prerequisite: Geant 4.10.04.p02 and ROOT 5.34/07 (later versions are ok)
 
